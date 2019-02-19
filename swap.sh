@@ -1,5 +1,7 @@
 #!/bin/sh
 
+swapon -s|grep file && echo "Already swapped" && exit 0
+
 dd if=/dev/zero of=/swapfile bs=1G count=2
 chmod 600 /swapfile
 mkswap /swapfile

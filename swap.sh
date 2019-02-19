@@ -1,6 +1,6 @@
 #!/bin/sh
 
-dd if=/dev/zero of=/swapfile bs=1G count=4
+dd if=/dev/zero of=/swapfile bs=1G count=2
 chmod 600 /swapfile
 mkswap /swapfile
 swapon /swapfile
